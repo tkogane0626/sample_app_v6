@@ -52,7 +52,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     delete logout_path
     # cookieを削除してログイン
     log_in_as(@user, remember_me: '0')
-    assert_not_empty cookies[:remember_token]
+    assert_empty cookies[:remember_token]
   end
   
 end
