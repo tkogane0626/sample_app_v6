@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   # Userリソースをroutesファイルに追加する
   resources :users
   
+  resources :account_activations, only: [:edit]
+  
 end
